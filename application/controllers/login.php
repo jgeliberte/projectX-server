@@ -14,11 +14,13 @@ class Login extends CI_Controller {
 	}
 
 	public function validate($data=null){
+		$fromRegistration = false;
 		if (!isset($_POST['credentials'])) {
 			$credentials = array(
 				'username'=> $data['username'],
 				'password'=> $data['password']
 			);
+			$fromRegistration = true;
 		} else {
 			$credentials = array(
 				'username'=> $_POST['credentials']['username'],
@@ -41,8 +43,11 @@ class Login extends CI_Controller {
 		$response = array(
 			'response'=>$isValid
 		);
-		print json_encode($response);
-		return $isValid;
+		if ($fromRegistration == false) {
+			print json_encode($response);
+		} else {
+			return $isValid;
+		}
 	}
 
 	public function register(){
