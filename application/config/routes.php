@@ -38,6 +38,19 @@
 |
 */
 
+// PATIENT MODULE
+$route['v1/addpatient'] = "patient/addPatient";
+
+// DENTAL MODULE
+
+// SERVICE MODULE
+
+// LOGS MODULE
+
+// USER MODULE
+
+// MEMBERSHIP MODULE
+
 $route['default_controller'] = "login/index";
 $route['404_override'] = '';
 
