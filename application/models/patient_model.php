@@ -1,6 +1,5 @@
 <?php 
 	class Patient_model extends CI_Model {
-
 		public function add($data) {
 			try {
 				$result = $this->db->insert('patient_information', $data);
@@ -41,6 +40,5 @@
 			}		
 			return $result;
 		}
-
 	}
 ?>

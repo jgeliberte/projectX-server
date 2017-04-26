@@ -53,7 +53,6 @@ DROP TABLE IF EXISTS `logs`;
 CREATE TABLE `logs` (
   `idlogs` int(11) NOT NULL AUTO_INCREMENT,
   `log_description` varchar(200) DEFAULT NULL,
-  `logscol` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idlogs`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -109,10 +108,10 @@ CREATE TABLE `patient_information` (
   `lastname` varchar(45) DEFAULT NULL,
   `age` int(3) DEFAULT NULL,
   `gender` varchar(10) DEFAULT NULL,
-  `address` varchar(45) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
   `email_address` varchar(45) DEFAULT NULL,
-  `primary_contact` int(12) DEFAULT NULL,
-  `secondary_contact` int(12) DEFAULT NULL,
+  `primary_contact` varchar(12) DEFAULT NULL,
+  `secondary_contact` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`idpatient`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -219,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-23 22:34:53
+-- Dump completed on 2017-04-26 22:53:05
