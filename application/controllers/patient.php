@@ -15,28 +15,77 @@ class Patient extends CI_Controller {
 		if ($isExisting->num_rows < 1) {
 			$result = $this->patient_model->add($data);
 			if ($result == 1) {
-				$response['status'] = "SUCCESS";
+				$response['status'] = "success";
 			} else {
-				$response['status'] = "FAILED";
+				$response['status'] = "failed";
 			}
 		} else {
-			$response['status'] = "FAILED";
-			$response['details'] = "Exisiting patient";
+			$response['status'] = "failed";
+			$response['details'] = "existing_patient";
 		}
 		print json_encode($response);
 	}
 
 	public function updatePatient() {
-
+		$data = json_decode($_POST['patient_data']);
+		$result = $this->patient_model->update($data);
+		$data = array();
+		if ($result == true) {
+			$data['status'] = "success";
+		} else {
+			$data['status'] = "failed";
+		}
+		print $data;
 	}
 
 	public function getAllPatient() {
-
+		$result = $this->patient_model->getAllPatient();
+		$data = array();
+		$patient_ctr = 0;
+		if ($result->num_rows != 0) {
+			$data['status'] = "fetched";
+			foreach ($result->result() as $res) {
+				$data[$patient_ctr]['id'] = $res->idpatient;
+				$data[$patient_ctr]['firstname'] = $res->firstname;
+				$data[$patient_ctr]['middlename'] = $res->middlename;
+				$data[$patient_ctr]['lastname'] = $res->lastname;
+				$data[$patient_ctr]['age'] = $res->age;
+				$data[$patient_ctr]['gender'] = $res->gender;
+				$data[$patient_ctr]['address'] = $res->address;
+				$data[$patient_ctr]['email_address'] = $res->email_address;
+				$data[$patient_ctr]['primary_contact'] = $res->primary_contact;
+				$data[$patient_ctr]['secondary_contact'] = $res->secondary_contact;
+				$patient_ctr++;
+			}
+		} else {
+			$data['status'] = "no_data";
+		}
+		print json_encode($data);
 	}
 
-	public function getPatient() {
+	public function getPatient($data) {
 		$result = $this->patient_model->getPatient($data);
-		return $result;	
+		$data = array();
+		$patient_ctr = 0;
+		if ($result->num_rows != 0) {
+			$data['status'] = "fetched";
+			foreach ($result->result() as $res) {
+				$data[$patient_ctr]['id'] = $res->idpatient;
+				$data[$patient_ctr]['firstname'] = $res->firstname;
+				$data[$patient_ctr]['middlename'] = $res->middlename;
+				$data[$patient_ctr]['lastname'] = $res->lastname;
+				$data[$patient_ctr]['age'] = $res->age;
+				$data[$patient_ctr]['gender'] = $res->gender;
+				$data[$patient_ctr]['address'] = $res->address;
+				$data[$patient_ctr]['email_address'] = $res->email_address;
+				$data[$patient_ctr]['primary_contact'] = $res->primary_contact;
+				$data[$patient_ctr]['secondary_contact'] = $res->secondary_contact;
+				$patient_ctr++;
+			}
+		} else {
+			$data['status'] = "no_data";
+		}
+		print json_encode($data);
 	}
 
 	public function getExistingPatient($data = null) {

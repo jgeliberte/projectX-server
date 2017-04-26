@@ -40,6 +40,9 @@
 
 // PATIENT MODULE
 $route['v1/addpatient'] = "patient/addPatient";
+$route['v1/fetchpatient/(:num)'] = "patient/getPatient/$1";
+$route['v1/fetchallpatient'] = "patient/getAllPatient";
+$route['v1/updatepatient'] = "patient/updatePatient";
 
 // DENTAL MODULE
 
