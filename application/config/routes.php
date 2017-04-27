@@ -47,6 +47,12 @@ $route['v1/updatepatient'] = "patient/updatePatient";
 // DENTAL MODULE
 
 // SERVICE MODULE
+$route['v1/addservice'] = "services/addService";
+$route['v1/updateservice'] = "services/updateService";
+$route['v1/getallservices'] = "services/getAllServices";
+$route['v1/getservice/(:num)'] = "services/getService/$1";
+$route['v1/getexistingservice'] = "services/getExistingService";
+// $route['v1/'] = "";
 
 // LOGS MODULE
 

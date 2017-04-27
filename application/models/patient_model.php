@@ -20,7 +20,7 @@
 		}
 
 		public function archive() {
-
+	
 		}
 
 		public function getPatient($data) {
