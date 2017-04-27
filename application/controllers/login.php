@@ -35,6 +35,14 @@ class Login extends CI_Controller {
 					break;
 				case 1:
 					$isValid = true;
+					foreach ($result->result() as $session_keys) {
+						$data = array (
+							'userid' => $session_keys->user_id_fk,
+							'username' => $session_keys->username,
+							'is_logged_in' => true
+						);
+						$this->session->set_userdata($data);
+					}
 					break;
 			}
 		} catch (Exception $e) {

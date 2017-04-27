@@ -38,6 +38,14 @@
 |
 */
 
+// GENERAL PAGES
+$route['v1/patient'] = "dashboard/patientRecords";
+$route['v1/dentalrecords'] = "dashboard/dentalRecords";
+$route['v1/dentalservice'] = "dashboard/dentalService";
+$route['v1/dentalinventory'] = "dashboard/dentalInventory";
+$route['v1/logs'] = "dashboard/logs";
+
+
 // PATIENT MODULE
 $route['v1/addpatient'] = "patient/addPatient";
 $route['v1/fetchpatient/(:num)'] = "patient/getPatient/$1";
