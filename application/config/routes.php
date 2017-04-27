@@ -52,7 +52,13 @@ $route['v1/updateservice'] = "services/updateService";
 $route['v1/getallservices'] = "services/getAllServices";
 $route['v1/getservice/(:num)'] = "services/getService/$1";
 $route['v1/getexistingservice'] = "services/getExistingService";
-// $route['v1/'] = "";
+
+// INVENTORY MODULE
+$route['v1/additem'] = "inventory/addItem";
+$route['v1/getitem/(:num)'] = "inventory/getItem/$1";
+$route['v1/getallitems'] = "inventory/getAllItems";
+$route['v1/updateitem'] = "inventory/updateItem";
+$route['v1/getexistingitem'] = "inventory/getExistingItem";
 
 // LOGS MODULE
 

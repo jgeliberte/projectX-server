@@ -1,5 +1,5 @@
 <div class="panel panel-primary content-center">
-  <nav class="headerBar panel-heading navbar-">
+  <nav class="headerBar panel-heading navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
       <span class="navbar-brand" href="#">Dental Management System</span>
