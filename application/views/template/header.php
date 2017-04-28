@@ -8,6 +8,9 @@
 	<script type="text/javascript" src="../../js/third-party/datatable.js"></script>
 	<script type="text/javascript" src="../../js/third-party/notify.min.js"></script>
 
+	<script type="text/javascript" src="../../js/dms/tableData.js"></script>
+	<script type="text/javascript" src="../../js/dms/datePicker.js"></script>
+
 	<title>DMS</title>
 </head>
 <body>

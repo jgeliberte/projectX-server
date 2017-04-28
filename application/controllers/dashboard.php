@@ -14,6 +14,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template/titleBar');
 		$this->load->view('pages/dashboard');
 		$this->load->view('template/footer');
+		
 	}
 
 	public function patientRecords() {
@@ -22,6 +23,7 @@ class Dashboard extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/titleBar');
+		$this->load->view('pages/dashboard');
 		$this->load->view('pages/patient_records');
 		$this->load->view('template/footer');
 	}
@@ -32,6 +34,7 @@ class Dashboard extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/titleBar');
+		$this->load->view('pages/dashboard');
 		$this->load->view('pages/dental_records');
 		$this->load->view('template/footer');
 	}
@@ -42,6 +45,7 @@ class Dashboard extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/titleBar');
+		$this->load->view('pages/dashboard');
 		$this->load->view('pages/dental_services');
 		$this->load->view('template/footer');
 	}
@@ -52,6 +56,7 @@ class Dashboard extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/titleBar');
+		$this->load->view('pages/dashboard');
 		$this->load->view('pages/dental_inventory');
 		$this->load->view('template/footer');
 	}
@@ -62,6 +67,7 @@ class Dashboard extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('template/titleBar');
+		$this->load->view('pages/dashboard');
 		$this->load->view('pages/logs');
 		$this->load->view('template/footer');		
 	}
