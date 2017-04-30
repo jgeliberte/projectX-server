@@ -1,7 +1,7 @@
 <div style="display: flex; width: 100%; justify-content: center; margin-top: 7%;">
 
 	<div class='square-box'>
-		<a href="../../v1/patient">
+		<a id="patient_records">
 			<div class='square-content user'><span class="textMenu" >Patient</span></div>
 		</a>
 	</div>

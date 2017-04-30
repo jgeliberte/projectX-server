@@ -45,14 +45,11 @@ $route['v1/dentalservice'] = "dashboard/dentalService";
 $route['v1/dentalinventory'] = "dashboard/dentalInventory";
 $route['v1/logs'] = "dashboard/logs";
 
-
 // PATIENT MODULE
 $route['v1/addpatient'] = "patient/addPatient";
 $route['v1/fetchpatient/(:num)'] = "patient/getPatient/$1";
 $route['v1/fetchallpatient'] = "patient/getAllPatient";
 $route['v1/updatepatient'] = "patient/updatePatient";
-
-// DENTAL MODULE
 
 // SERVICE MODULE
 $route['v1/addservice'] = "services/addService";

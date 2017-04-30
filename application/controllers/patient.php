@@ -43,7 +43,7 @@ class Patient extends CI_Controller {
 		$data = array();
 		$patient_ctr = 0;
 		if ($result->num_rows != 0) {
-			$data['status'] = "fetched";
+			$response['status'] = "fetched";
 			foreach ($result->result() as $res) {
 				$data[$patient_ctr]['id'] = $res->idpatient;
 				$data[$patient_ctr]['firstname'] = $res->firstname;
@@ -60,7 +60,8 @@ class Patient extends CI_Controller {
 		} else {
 			$data['status'] = "no_data";
 		}
-		print json_encode($data);
+		$response['data'] = $data;
+		print json_encode($response);
 	}
 
 	public function getPatient($data) {
@@ -85,6 +86,7 @@ class Patient extends CI_Controller {
 		} else {
 			$data['status'] = "no_data";
 		}
+		$data['data'] = $data;
 		print json_encode($data);
 	}
 
