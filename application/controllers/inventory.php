@@ -43,7 +43,7 @@ class Inventory extends CI_Controller {
 		$data = array();
 		$inventory_ctr = 0;
 		if ($result->num_rows != 0) {
-			$data['status'] = "fetched";
+			$response['status'] = "fetched";
 			foreach ($result->result() as $res) {
 				$data[$inventory_ctr]['id'] = $res->idinventory;
 				$data[$inventory_ctr]['item_code'] = $res->item_code;
@@ -55,9 +55,10 @@ class Inventory extends CI_Controller {
 				$inventory_ctr++;
 			}
 		} else {
-			$data['status'] = "no_data";
+			$response['status'] = "no_data";
 		}
-		print json_encode($data);
+		$response['data'] = $data;
+		print json_encode($response);
 	}
 
 	public function getItem($data) {
@@ -65,7 +66,7 @@ class Inventory extends CI_Controller {
 		$data = array();
 		$inventory_ctr = 0;
 		if ($result->num_rows != 0) {
-			$data['status'] = "fetched";
+			$response['status'] = "fetched";
 			foreach ($result->result() as $res) {
 				$data[$inventory_ctr]['id'] = $res->idinventory;
 				$data[$inventory_ctr]['item_code'] = $res->item_code;
@@ -77,8 +78,9 @@ class Inventory extends CI_Controller {
 				$inventory_ctr++;
 			}
 		} else {
-			$data['status'] = "no_data";
+			$response['status'] = "no_data";
 		}
+		$response['data'] = $data;
 		print json_encode($data);
 	}
 

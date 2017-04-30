@@ -43,7 +43,7 @@
 			$data = array();
 			$service_ctr = 0;
 			if ($result->num_rows != 0) {
-				$data['status'] = "fetched";
+				$response['status'] = "fetched";
 				foreach ($result->result() as $res) {
 					$data[$service_ctr]['id'] = $res->idservices;
 					$data[$service_ctr]['service_name'] = $res->service_name;
@@ -53,9 +53,10 @@
 					$service_ctr++;
 				}
 			} else {
-				$data['status'] = "no_data";
+				$response['status'] = "no_data";
 			}
-			print json_encode($data);
+			$response['data'] = $data;
+			print json_encode($response);
 		}
 
 		public function getService($data) {
@@ -63,7 +64,7 @@
 			$data = array();
 			$service_ctr = 0;
 			if ($result->num_rows != 0) {
-				$data['status'] = "fetched";
+				$response['status'] = "fetched";
 				foreach ($result->result() as $res) {
 					$data[$service_ctr]['id'] = $res->idservices;
 					$data[$service_ctr]['service_name'] = $res->service_name;
@@ -73,9 +74,10 @@
 					$patient_ctr++;
 				}
 			} else {
-				$data['status'] = "no_data";
+				$response['status'] = "no_data";
 			}
-			print json_encode($data);
+			$response['data'] = $data;
+			print json_encode($response);
 		}
 
 		public function getExistingService($data = null) {
