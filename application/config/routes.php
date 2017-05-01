@@ -68,7 +68,7 @@ $route['v1/getexistingitem'] = "inventory/getExistingItem";
 // LOGS MODULE
 
 // USER MODULE
-
+$route['v1/logout'] = "login/logout";
 // MEMBERSHIP MODULE
 
 $route['default_controller'] = "login/index";
