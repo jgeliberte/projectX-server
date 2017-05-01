@@ -34,6 +34,7 @@ class Patient extends CI_Controller {
 		$data = array();
 		if ($result == true) {
 			$data['status'] = "success";
+			$this->log("Updated patient named ".$data->firstname." ".$data->lastname." by ".$this->session->userdata('username'));
 		} else {
 			$data['status'] = "failed";
 		}
