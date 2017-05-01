@@ -5,6 +5,7 @@ class Patient extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('patient_model');
+		$this->load->model('logs_model');
 		$this->load->helper(array('form', 'url'));
 	}
 
@@ -16,6 +17,7 @@ class Patient extends CI_Controller {
 			$result = $this->patient_model->add($data);
 			if ($result == 1) {
 				$response['status'] = "success";
+				$this->log("Added a new patient named ".$data->firstname." ".$data->lastname." by ".$this->session->userdata('username'));
 			} else {
 				$response['status'] = "failed";
 			}
@@ -92,6 +94,11 @@ class Patient extends CI_Controller {
 
 	public function getExistingPatient($data = null) {
 		$result = $this->patient_model->getPatient($data);
+		return $result;
+	}
+
+	public function log($description){
+		$result = $this->logs_model->addLogs($description);
 		return $result;
 	}
 }

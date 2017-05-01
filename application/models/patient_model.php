@@ -25,7 +25,12 @@
 
 		public function getPatient($data) {
 			try {
-				$result = $this->db->get_where('patient_information', array('idpatient' => $data));
+				if (!isset($data->idpatient) || $data->idpatient == null) {
+					$result = $this->db->get_where('patient_information', array('firstname' => $data->firstname,'lastname' => $data->lastname,'middlename' => $data->middlename));
+				} else {
+					$result = $this->db->get_where('patient_information', array('idpatient' => $data));
+				}
+				
 			} catch (Exception $e) {
 				$result = $e->getMessage();
 			}
