@@ -1,4 +1,4 @@
-<div class="main">
+<div id= "patientId" class="main" onload="loadsTable();">
 	<table id="patientRecords" class="table table-striped table-bordered dataTable no-footer" role="grid" width="100%">
 		<thead>
 			<tr role="row">
@@ -77,7 +77,7 @@
 											<label class="labelModal control-label" for="age" >BirthDate</label>
 											<div class="col-sm-9">
 												<div class='input-group date' id='birthdate'>
-													<input type='text' class="form-control" />
+													<input type='text' id='birthdate' class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
 													</span>
