@@ -4,13 +4,20 @@ class Login extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
+		$this->load->library('session');
 		$this->load->model('user_model');
 	}
 
 	public function index(){
-		$this->load->view('template/header');
-		$this->load->view('pages/index');
-		$this->load->view('template/footer');
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		if(!isset($is_logged_in) || ($is_logged_in !== TRUE)) {
+			$this->load->view('template/header');
+			$this->load->view('pages/index');
+			$this->load->view('template/footer');			
+		}
+		else {
+			header('Location: ' . '../../dashboard', true);
+		}
 	}
 
 	public function validate($data=null){
@@ -82,5 +89,23 @@ class Login extends CI_Controller {
 			);
 		}
 		print json_encode($response);
+	}
+
+	public function logout() {
+		$this->session->sess_destroy();
+		header('Location: ' . '../../', true);
+		die();
+	}
+
+	public function is_logged_in() {
+		$is_logged_in = $this->session->userdata('is_logged_in');
+		
+		if(!isset($is_logged_in) || ($is_logged_in !== TRUE)) {
+			echo 'You don\'t have permission to access this page. <a href="../../../">Login</a>';
+			die();
+		}
+		else {
+			header('Location: ' . '../../dashboard', true);
+		}
 	}
 }

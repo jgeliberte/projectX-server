@@ -5,6 +5,7 @@ class Inventory extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('inventory_model');
+		$this->load->model('logs_model');
 		$this->load->helper(array('form', 'url'));
 	}
 
@@ -16,6 +17,7 @@ class Inventory extends CI_Controller {
 			$result = $this->inventory_model->add($data);
 			if ($result == 1) {
 				$response['status'] = "success";
+				$this->log("Added an item named ".$data->item_name." with a quantity of ".$data->item_quantity."by ".$this->session->userdata('username'));
 			} else {
 				$response['status'] = "failed";
 			}
@@ -32,6 +34,7 @@ class Inventory extends CI_Controller {
 		$data = array();
 		if ($result == true) {
 			$data['status'] = "success";
+			$this->log("Updated an item named ".$data->item_name." with a quantity of ".$data->item_quantity."by ".$this->session->userdata('username'));
 		} else {
 			$data['status'] = "failed";
 		}
@@ -43,7 +46,7 @@ class Inventory extends CI_Controller {
 		$data = array();
 		$inventory_ctr = 0;
 		if ($result->num_rows != 0) {
-			$data['status'] = "fetched";
+			$response['status'] = "fetched";
 			foreach ($result->result() as $res) {
 				$data[$inventory_ctr]['id'] = $res->idinventory;
 				$data[$inventory_ctr]['item_code'] = $res->item_code;
@@ -55,9 +58,10 @@ class Inventory extends CI_Controller {
 				$inventory_ctr++;
 			}
 		} else {
-			$data['status'] = "no_data";
+			$response['status'] = "no_data";
 		}
-		print json_encode($data);
+		$response['data'] = $data;
+		print json_encode($response);
 	}
 
 	public function getItem($data) {
@@ -65,7 +69,7 @@ class Inventory extends CI_Controller {
 		$data = array();
 		$inventory_ctr = 0;
 		if ($result->num_rows != 0) {
-			$data['status'] = "fetched";
+			$response['status'] = "fetched";
 			foreach ($result->result() as $res) {
 				$data[$inventory_ctr]['id'] = $res->idinventory;
 				$data[$inventory_ctr]['item_code'] = $res->item_code;
@@ -77,13 +81,19 @@ class Inventory extends CI_Controller {
 				$inventory_ctr++;
 			}
 		} else {
-			$data['status'] = "no_data";
+			$response['status'] = "no_data";
 		}
+		$response['data'] = $data;
 		print json_encode($data);
 	}
 
 	public function getExistingItem($data = null) {
 		$result = $this->inventory_model->getItem($data);
+		return $result;
+	}
+
+	public function log($description){
+		$result = $this->logs_model->addLogs($description);
 		return $result;
 	}
 }

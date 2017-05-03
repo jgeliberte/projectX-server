@@ -2,6 +2,16 @@
 
 class Logs extends CI_Controller {
 
+	public function __construct() {
+		parent::__construct();
+		$this->load->library('session');
+		$this->load->model('logs_model');
+	}
+
+	public function addLogs($description){
+		$result = $this->logs_model->addlog();
+		return $result;
+	}
 }
 
 ?>

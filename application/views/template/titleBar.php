@@ -7,11 +7,11 @@
       <div class="pull-right">
         <div class="btn-group headerVerticalCenter">
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            User
+            <?php echo $this->session->userdata('username') ?>
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="#">Log out</a></li>
+            <li><a href="../../v1/logout">Log out</a></li>
           </ul>
         </div>
       </div>
