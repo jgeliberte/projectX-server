@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="../../js/third-party/notify.min.js"></script>
 
 	<script type="text/javascript" src="../../js/dms/patient/patient.js"></script>
+	<script type="text/javascript" src="../../js/dms/dental/dentalRecords.js"></script>
 
 	<title>DMS</title>
 </head>
