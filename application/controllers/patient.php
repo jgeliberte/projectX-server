@@ -52,7 +52,7 @@ class Patient extends CI_Controller {
 				$data[$patient_ctr]['firstname'] = $res->firstname;
 				$data[$patient_ctr]['middlename'] = $res->middlename;
 				$data[$patient_ctr]['lastname'] = $res->lastname;
-				$data[$patient_ctr]['age'] = $res->age;
+				$data[$patient_ctr]['birthdate'] = $res->birthdate;
 				$data[$patient_ctr]['gender'] = $res->gender;
 				$data[$patient_ctr]['address'] = $res->address;
 				$data[$patient_ctr]['email_address'] = $res->email_address;
@@ -78,7 +78,7 @@ class Patient extends CI_Controller {
 				$data[$patient_ctr]['firstname'] = $res->firstname;
 				$data[$patient_ctr]['middlename'] = $res->middlename;
 				$data[$patient_ctr]['lastname'] = $res->lastname;
-				$data[$patient_ctr]['age'] = $res->age;
+				$data[$patient_ctr]['birthdate'] = $res->birthdate;
 				$data[$patient_ctr]['gender'] = $res->gender;
 				$data[$patient_ctr]['address'] = $res->address;
 				$data[$patient_ctr]['email_address'] = $res->email_address;
