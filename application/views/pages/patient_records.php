@@ -36,7 +36,7 @@
 											<label class="labelModal control-label" for="lastName" >Last Name</label>
 											<div class="col-md-9">
 												<input type="text" class="form-control"
-												id="lastName" placeholder="Password"/>
+												id="lastName" placeholder="Last Name"/>
 											</div>
 										</div>
 										<div class="form-group">
@@ -67,8 +67,8 @@
 										<div class="form-group">
 											<label class="labelModal control-label" for="age" >BirthDate</label>
 											<div class="col-md-9">
-												<div class='input-group date' id='birthdate'>
-													<input type='text' id='birthdate' class="form-control" />
+												<div class='input-group date'>
+													<input type='text' id="birthdate" class="form-control" />
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
 													</span>
