@@ -12,9 +12,9 @@
 		}
 
 		public function update($data) {
-			try {
-				$this->db->where('idpatient', $data->idpatient);
-				$result = $this->db->update('patient_information', $data);
+			try {				
+				$query = "UPDATE patient_information SET firstname='".$data->firstname."',middlename='".$data->middlename."',lastname='".$data->lastname."',birthdate='".$data->birthdate."',gender='".$data->gender."',address='".$data->address."',email_address='".$data->email_address."',primary_contact='".$data->primary_contact."',secondary_contact='".$data->secondary_contact."' WHERE idpatient='".$data->id."'";
+				$result = $this->db->query($query);
 			} catch (Exception $e) {
 				$result = $e->getMessage();
 			}

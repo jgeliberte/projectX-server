@@ -38,7 +38,7 @@ class Patient extends CI_Controller {
 		} else {
 			$data['status'] = "failed";
 		}
-		print $data;
+		print json_encode($data);
 	}
 
 	public function getAllPatient() {
