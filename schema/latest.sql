@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
--- Host: localhost    Database: project_dms
+-- Host: 127.0.0.1    Database: project_dms
 -- ------------------------------------------------------
 -- Server version	5.7.17-log
 
@@ -106,7 +106,7 @@ CREATE TABLE `patient_information` (
   `firstname` varchar(45) DEFAULT NULL,
   `middlename` varchar(45) DEFAULT NULL,
   `lastname` varchar(45) DEFAULT NULL,
-  `age` int(3) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
   `gender` varchar(10) DEFAULT NULL,
   `address` varchar(100) DEFAULT NULL,
   `email_address` varchar(45) DEFAULT NULL,
@@ -218,4 +218,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-26 22:53:05
+-- Dump completed on 2017-05-06 22:24:54
