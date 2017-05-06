@@ -29,12 +29,12 @@ class Patient extends CI_Controller {
 	}
 
 	public function updatePatient() {
-		$data = json_decode($_POST['patient_data']);
-		$result = $this->patient_model->update($data);
+		$response = json_decode($_POST['patient_data']);
+		$result = $this->patient_model->update($response);
 		$data = array();
 		if ($result == true) {
 			$data['status'] = "success";
-			$this->log("Updated patient named ".$data->firstname." ".$data->lastname." by ".$this->session->userdata('username'));
+			$this->log("Updated patient named ".$response->firstname." ".$response->lastname." by ".$this->session->userdata('username'));
 		} else {
 			$data['status'] = "failed";
 		}
