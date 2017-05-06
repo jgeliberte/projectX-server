@@ -5,4 +5,6 @@
 
 <link rel="stylesheet" href="../../css/third-party/bootstrap.min.css">
 <link rel="stylesheet" href="../../css/third-party/datatable.css">
+<link rel="stylesheet" href="../../css/third-party/jquery-ui.min.css">
+
 </html>

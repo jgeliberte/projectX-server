@@ -47,13 +47,6 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="labelModal control-label" for="age" >Age</label>
-											<div class="col-md-2">
-												<input type="text" class="form-control"
-												id="age" placeholder="Age"/>
-											</div>
-										</div>
-										<div class="form-group">
 											<label class="labelModal control-label" for="gender" >Gender</label>
 											<div class="col-md-9">
 												<label class="radio-inline">
