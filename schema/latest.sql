@@ -45,7 +45,7 @@ CREATE TABLE `logs` (
   `idlogs` int(11) NOT NULL AUTO_INCREMENT,
   `log_description` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`idlogs`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,6 +67,26 @@ CREATE TABLE `membership` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `patient_dental_history`
+--
+
+DROP TABLE IF EXISTS `patient_dental_history`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `patient_dental_history` (
+  `idpatient_dental_history` int(11) NOT NULL AUTO_INCREMENT,
+  `patient_id_fk` int(11) DEFAULT NULL,
+  `service_rendered` varchar(45) DEFAULT NULL,
+  `date_rendered` date DEFAULT NULL,
+  `fee_rendered` int(11) DEFAULT NULL,
+  `remarks_rendered` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`idpatient_dental_history`),
+  KEY `patient_id_fk_idx` (`patient_id_fk`),
+  CONSTRAINT `patient_id_fk` FOREIGN KEY (`patient_id_fk`) REFERENCES `patient_information` (`idpatient`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `patient_information`
 --
 
@@ -75,18 +95,18 @@ DROP TABLE IF EXISTS `patient_information`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `patient_information` (
   `idpatient` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(45) DEFAULT NULL,
-  `middlename` varchar(45) DEFAULT NULL,
-  `lastname` varchar(45) DEFAULT NULL,
-  `birthdate` date DEFAULT NULL,
-  `gender` varchar(10) DEFAULT NULL,
-  `address` varchar(100) DEFAULT NULL,
+  `firstname` varchar(45) NOT NULL,
+  `middlename` varchar(45) NOT NULL,
+  `lastname` varchar(45) NOT NULL,
+  `birthdate` date NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `address` varchar(100) NOT NULL,
   `email_address` varchar(45) DEFAULT NULL,
   `primary_contact` varchar(12) DEFAULT NULL,
-  `secondary_contact` varchar(12) DEFAULT NULL,
+  `secondary_contact` varchar(12) NOT NULL,
   `status` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`idpatient`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -154,4 +174,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-20 21:56:06
+-- Dump completed on 2017-05-21  1:01:50
