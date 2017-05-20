@@ -35,15 +35,6 @@ CREATE TABLE `inventory` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `inventory`
---
-
-LOCK TABLES `inventory` WRITE;
-/*!40000 ALTER TABLE `inventory` DISABLE KEYS */;
-/*!40000 ALTER TABLE `inventory` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `logs`
 --
 
@@ -54,17 +45,8 @@ CREATE TABLE `logs` (
   `idlogs` int(11) NOT NULL AUTO_INCREMENT,
   `log_description` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`idlogs`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `logs`
---
-
-LOCK TABLES `logs` WRITE;
-/*!40000 ALTER TABLE `logs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `logs` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `membership`
@@ -85,16 +67,6 @@ CREATE TABLE `membership` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `membership`
---
-
-LOCK TABLES `membership` WRITE;
-/*!40000 ALTER TABLE `membership` DISABLE KEYS */;
-INSERT INTO `membership` VALUES (1,46,'jgeliberte','decmeister12');
-/*!40000 ALTER TABLE `membership` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `patient_information`
 --
 
@@ -112,18 +84,10 @@ CREATE TABLE `patient_information` (
   `email_address` varchar(45) DEFAULT NULL,
   `primary_contact` varchar(12) DEFAULT NULL,
   `secondary_contact` varchar(12) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`idpatient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `patient_information`
---
-
-LOCK TABLES `patient_information` WRITE;
-/*!40000 ALTER TABLE `patient_information` DISABLE KEYS */;
-/*!40000 ALTER TABLE `patient_information` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `services`
@@ -143,15 +107,6 @@ CREATE TABLE `services` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `services`
---
-
-LOCK TABLES `services` WRITE;
-/*!40000 ALTER TABLE `services` DISABLE KEYS */;
-/*!40000 ALTER TABLE `services` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `user_roles`
 --
 
@@ -167,15 +122,6 @@ CREATE TABLE `user_roles` (
   CONSTRAINT `user_id` FOREIGN KEY (`user_id_fk`) REFERENCES `users` (`idusers`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `user_roles`
---
-
-LOCK TABLES `user_roles` WRITE;
-/*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
@@ -198,16 +144,6 @@ CREATE TABLE `users` (
   PRIMARY KEY (`idusers`)
 ) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (46,'john','geliberte','domingo','mr.','',0,0,'','');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -218,4 +154,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-06 22:24:54
+-- Dump completed on 2017-05-20 21:56:06
