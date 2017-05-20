@@ -2,7 +2,7 @@
 	class Patient_model extends CI_Model {
 		public function add($data) {
 			try {
-				$query = "INSERT INTO patient_information VALUES(0,'".$data->firstname."','".$data->middlename."','".$data->lastname."','".$data->birthdate."','".$data->gender."','".$data->address."','".$data->email_address."','".$data->primary_contact."','".$data->secondary_contact."')";
+				$query = "INSERT INTO patient_information VALUES(0,'".$data->firstname."','".$data->middlename."','".$data->lastname."','".$data->birthdate."','".$data->gender."','".$data->address."','".$data->email_address."','".$data->primary_contact."','".$data->secondary_contact."',true)";
 				$result = $this->db->query($query);
 				var_dump($result);
 			} catch (Exception $e) {
@@ -21,8 +21,15 @@
 			return $result;
 		}
 
-		public function archive() {
-	
+		public function archive($data) {
+			$status = false;
+			try {
+				$query = "UPDATE patient_information SET status = false WHERE idpatient='".$data."'";
+				$status = $this->db->query($query);
+			} catch (Exception $e) {
+				$status = $e->getMessage();
+			}
+			return $status;
 		}
 
 		public function getPatient($data) {

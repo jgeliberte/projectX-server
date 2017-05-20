@@ -102,6 +102,12 @@ class Patient extends CI_Controller {
 		$result = $this->logs_model->addLogs($description);
 		return $result;
 	}
+
+	public function archivePatient() {
+		$data = json_decode($_POST['patient_id']);
+		$result = $this->patient_model->archive($data);
+		print json_encode($result);
+	}
 }
 
 ?>
