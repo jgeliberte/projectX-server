@@ -12,7 +12,7 @@
 		</a>
 	</div>
 	<div id="logsMenu" class='square-box'>
-		<a href="../../v1/logs">
+		<a>
 			<div class='square-content logs'><span class="textMenu">Logs</span></div>
 		</a>
 	</div>

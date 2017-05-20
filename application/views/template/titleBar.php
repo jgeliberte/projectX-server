@@ -6,8 +6,7 @@
       </div>
       <div class="pull-right">
         <div class="btn-group headerVerticalCenter">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <?php echo $this->session->userdata('username') ?>
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="fa fa-user fa-lg"></i> <?php echo $this->session->userdata('username') ?>
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">

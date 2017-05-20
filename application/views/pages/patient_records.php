@@ -1,7 +1,7 @@
 <div id= "patientId" class="main" onload="loadsTable();">
 	<table id="patientRecords" class="table table-striped table-bordered dataTable no-footer" role="grid" width="100%">
 	</table>
-	<button style="margin: auto; display: block;" class="btn btn-primary btn-md" data-toggle="modal" data-target="#addPatient">Add Patient
+	<button style="margin: auto; display: block;" class="btn btn-primary btn-md" data-toggle="modal" data-target="#addPatient"><i class="fa fa-user-plus fa-lg"></i> Add Patient
 	</button>
 
 	<form class="form-horizontal" role="form">
@@ -50,10 +50,10 @@
 											<label class="labelModal control-label" for="gender" >Gender</label>
 											<div class="col-md-9">
 												<label class="radio-inline">
-													<input type="radio" name="gender" id="male" value="Male"> Male
+													<input type="radio" name="gender" value="Male"> Male
 												</label>
 												<label class="radio-inline">
-													<input type="radio" name="gender" id="female" value="Female"> Female
+													<input type="radio" name="gender" value="Female"> Female
 												</label>
 											</div>
 										</div>
@@ -77,11 +77,13 @@
 						<div class="panel-group" id="accordion">
 							<div class="panel panel-default">
 								<div class="panel-heading">
+								<a data-toggle="collapse" data-parent="#accordion" href="#contactInfo">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#contactInfo">
+										
 											Contact Information
-										</a>
+										
 									</h4>
+									</a>
 								</div>
 								<div id="contactInfo" class="panel-collapse collapse">
 									<div class="panel-body">
@@ -89,7 +91,7 @@
 										<div class="form-group">
 											<label class="labelModal control-label" for="address">Address</label>
 											<div class="col-md-9">
-												<input type="text" id="address" class="form-control" />
+												<input type="text" id="address" class="form-control" placeholder="ex. #10 sample st. BrangayName CityName Province" />
 												<div class="addressInputBox pull-left">
 													<label class="subLabelAddress" for="houseNumber">House Number</label>
 												</div>
@@ -111,7 +113,7 @@
 											<label class="labelModal control-label" for="email">Email Address</label>
 											<div class="col-md-4">
 												<input type="email" class="form-control"
-												id="email" placeholder="email"/>
+												id="email" placeholder="Email"/>
 											</div>
 										</div>
 										<div class="form-group">
