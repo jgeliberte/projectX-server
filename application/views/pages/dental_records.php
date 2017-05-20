@@ -60,7 +60,7 @@
 		<div id="services" class="tab-pane fade tableAlignFromTop">
 			<table id="dentalService" class="table table-striped table-bordered dataTable no-footer" role="grid" width="100%">
 			</table>
-			<button style="margin: auto; display: block;" class="btn btn-primary btn-md" data-toggle="modal" data-target="#addService"><i class="fa fa-medkit" aria-hidden="true"></i> Add Service
+			<button style="margin: auto; display: block;" class="btn btn-primary btn-md" data-toggle="modal" data-target="#addService"><i class="fa fa-medkit fa-lg" aria-hidden="true"></i> Add Service
 			</button>
 
 			<!-- Add Dental Service -->

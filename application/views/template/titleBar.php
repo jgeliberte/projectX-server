@@ -10,7 +10,7 @@
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="../../v1/logout">Log out</a></li>
+            <li><a href="../../v1/logout"><i class="fa fa-power-off"></i> Log out</a></li>
           </ul>
         </div>
       </div>
