@@ -23,7 +23,7 @@
 
 		public function deleteDiagnosis($data){
 			try {
-				$query = "DELETE FROM patient_dental_history WHERE idpatient_dental_history='".$data->id."'";
+				$query = "DELETE FROM patient_dental_history WHERE idpatient_dental_history='".$data."'";
 				$result = $this->db->query($query);
 			} catch (Exception $e) {
 				$result = $e->getMessage();
