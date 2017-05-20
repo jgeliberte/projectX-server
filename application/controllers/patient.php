@@ -58,6 +58,7 @@ class Patient extends CI_Controller {
 				$data[$patient_ctr]['email_address'] = $res->email_address;
 				$data[$patient_ctr]['primary_contact'] = $res->primary_contact;
 				$data[$patient_ctr]['secondary_contact'] = $res->secondary_contact;
+				$data[$patient_ctr]['status'] = $res->status;
 				$patient_ctr++;
 			}
 		} else {
