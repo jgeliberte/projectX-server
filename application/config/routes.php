@@ -59,6 +59,12 @@ $route['v1/getallservices'] = "services/getAllServices";
 $route['v1/getservice/(:num)'] = "services/getService/$1";
 $route['v1/getexistingservice'] = "services/getExistingService";
 
+// DIAGNOSE MODULE
+$route['v1/diagnose'] = "diagnose/diagnosePatient";
+$route['v1/modifyhistory'] = "diagnose/modifyDiagnoseHistory";
+$route['v1/deletehistory'] = "diagnose/deleteDiagnoseHistory";
+$route['v1/gethistory'] = "diagnose/getPatientDiagnoseHistory";
+
 // INVENTORY MODULE
 $route['v1/additem'] = "inventory/addItem";
 $route['v1/getitem/(:num)'] = "inventory/getItem/$1";
