@@ -95,14 +95,14 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="labelModal control-label" for="serviceName">Price</label>
+									<label class="labelModal control-label" for="serviceName">Fee</label>
 									<div class="col-md-4">
 										<div class='input-group pesos'>
 											<span class="input-group-addon">
 											<i class="fa fa-rub" aria-hidden="true"></i>
 											</span>
 											<input type="text" class="form-control" 
-											id="price"/>
+											id="fee"/>
 										</div>
 									</div>
 								</div>

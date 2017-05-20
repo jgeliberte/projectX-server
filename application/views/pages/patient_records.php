@@ -29,21 +29,21 @@
 											<label class="labelModal control-label" for="firstName">First Name</label>
 											<div class="col-md-9">
 												<input type="text" class="form-control" 
-												id="firstName" placeholder="First Name"/>
+												id="firstName" placeholder="First Name" required/>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="lastName" >Last Name</label>
 											<div class="col-md-9">
 												<input type="text" class="form-control"
-												id="lastName" placeholder="Last Name"/>
+												id="lastName" placeholder="Last Name" required>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="middleName">Middle Name</label>
 											<div class="col-md-9">
 												<input type="text" class="form-control"
-												id="middleName" placeholder="Middle Name"/>
+												id="middleName" placeholder="Middle Name" required/>
 											</div>
 										</div>
 										<div class="form-group">
@@ -61,7 +61,7 @@
 											<label class="labelModal control-label" for="age" >BirthDate</label>
 											<div class="col-md-9">
 												<div class='input-group date'>
-													<input type='text' id="birthdate" class="form-control" />
+													<input type='text' id="birthdate" class="form-control" required/>
 													<span class="input-group-addon">
 														<span class="glyphicon glyphicon-calendar"></span>
 													</span>
@@ -91,7 +91,7 @@
 										<div class="form-group">
 											<label class="labelModal control-label" for="address">Address</label>
 											<div class="col-md-9">
-												<input type="text" id="address" class="form-control" placeholder="ex. #10 sample st. BrangayName CityName Province" />
+												<input type="text" id="address" class="form-control" placeholder="ex. #10 sample st. BrangayName CityName Province" required/>
 												<div class="addressInputBox pull-left">
 													<label class="subLabelAddress" for="houseNumber">House Number</label>
 												</div>
@@ -120,7 +120,7 @@
 											<label class="labelModal control-label" for="primary">Primary Number</label>
 											<div class="col-md-4">
 												<input type="text" class="form-control"
-												id="primary" placeholder="Primary Number"/>
+												id="primary" placeholder="Primary Number" required/>
 											</div>
 										</div>
 										<div class="form-group">
