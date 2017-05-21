@@ -21,7 +21,10 @@
 								<div id="primary"></div>
 							</div>
 							<div class="modal-body">
-								
+							<div class="form-group">
+								<div id="serviceIdDiv">
+								</div>
+								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -81,18 +84,11 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="labelModal control-label" for="serviceDesc">Service Desc</label>
-									<div class="col-md-9">
-										<textarea class="form-control" 
-										id="serviceDesc" placeholder="Service Desc"></textarea>
-									</div>
-								</div>
-								<div class="form-group">
 									<label class="labelModal control-label" for="fee">Fee</label>
 									<div class="col-md-4">
 										<div class='input-group pesos'>
 											<span class="input-group-addon">
-											<i class="fa fa-rub" aria-hidden="true"></i>
+												<i class="fa fa-rub" aria-hidden="true"></i>
 											</span>
 											<input type="text" class="form-control" 
 											id="fee"/>
