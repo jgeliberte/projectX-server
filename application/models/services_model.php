@@ -4,7 +4,6 @@
 			try {
 				$query = "INSERT INTO services VALUES(0,'".$data->service_name."','".$data->service_fee."','".date("Y/m/d")."','".date("Y/m/d")."')";
 				$result = $this->db->query($query);
-				$result = $result->result();
 			} catch (Exception $e) {
 				$result = $e->getMessage();
 			}
