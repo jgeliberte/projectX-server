@@ -11,7 +11,6 @@
 
 		public function addService() {
 			$data = json_decode($_POST['service_data']);
-			var_dump($data);
 			$isExisting = $this->getExistingService($data->service_name);
 			$response = array();
 			if ($isExisting->num_rows < 1) {
