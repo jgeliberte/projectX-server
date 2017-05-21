@@ -74,13 +74,6 @@
 							</div>
 							<div class="modal-body">
 								<div class="form-group">
-									<label class="labelModal control-label" for="serviceCode">Service Code</label>
-									<div class="col-md-9">
-										<input type="text" class="form-control" 
-										id="serviceCode" placeholder="Service Code"/>
-									</div>
-								</div>
-								<div class="form-group">
 									<label class="labelModal control-label" for="serviceName">Service Name</label>
 									<div class="col-md-9">
 										<input type="text" class="form-control" 
@@ -95,7 +88,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="labelModal control-label" for="serviceName">Fee</label>
+									<label class="labelModal control-label" for="fee">Fee</label>
 									<div class="col-md-4">
 										<div class='input-group pesos'>
 											<span class="input-group-addon">

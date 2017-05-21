@@ -36,7 +36,7 @@
 											<label class="labelModal control-label" for="lastName" >Last Name</label>
 											<div class="col-md-9">
 												<input type="text" class="form-control"
-												id="lastName" placeholder="Last Name" required>
+												id="lastName" placeholder="Last Name" required/>
 											</div>
 										</div>
 										<div class="form-group">
@@ -138,7 +138,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-						<button id="btnAddPatient" type="button" class="btn btn-primary">Save</button>
+						<input type="submit" id="btnAddPatient" type="button" class="btn btn-primary" value="Save"/>
 					</div>
 				</div>
 			</div>
