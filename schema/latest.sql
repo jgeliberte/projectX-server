@@ -45,7 +45,7 @@ CREATE TABLE `logs` (
   `idlogs` int(11) NOT NULL AUTO_INCREMENT,
   `log_description` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`idlogs`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -117,13 +117,13 @@ DROP TABLE IF EXISTS `services`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `services` (
-  `idservices` int(11) NOT NULL,
-  `service_name` varchar(45) DEFAULT NULL,
-  `service_fee` int(11) DEFAULT NULL,
-  `date_created` datetime DEFAULT NULL,
-  `date_updated` datetime DEFAULT NULL,
+  `idservices` int(11) NOT NULL AUTO_INCREMENT,
+  `service_name` varchar(45) NOT NULL,
+  `service_fee` int(11) NOT NULL,
+  `date_created` datetime NOT NULL,
+  `date_updated` datetime NOT NULL,
   PRIMARY KEY (`idservices`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,4 +174,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-21  1:01:50
+-- Dump completed on 2017-05-21 15:47:43

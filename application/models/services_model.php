@@ -2,7 +2,9 @@
 	class Services_model extends CI_Model {
 		public function add($data) {
 			try {
-				$result = $this->db->insert('services', $data);
+				$query = "INSERT INTO services VALUES(0,'".$data->service_name."','".$data->service_fee."','".$data->date_created."','".$data->date_updated."')";
+				$result = $this->db->query($query);
+				$result = $result->result();
 			} catch (Exception $e) {
 				$result = $e->getMessage();
 			}
