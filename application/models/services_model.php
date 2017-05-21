@@ -2,7 +2,7 @@
 	class Services_model extends CI_Model {
 		public function add($data) {
 			try {
-				$query = "INSERT INTO services VALUES(0,'".$data->service_name."','".$data->service_fee."','".$data->date_created."','".$data->date_updated."')";
+				$query = "INSERT INTO services VALUES(0,'".$data->service_name."','".$data->service_fee."','".date("Y/m/d")."','".date("Y/m/d")."')";
 				$result = $this->db->query($query);
 				$result = $result->result();
 			} catch (Exception $e) {
@@ -13,6 +13,7 @@
 
 		public function update($data) {
 			try {
+				$data->date_updated = date("Y/m/d");
 				$this->db->where('idservices', $data->idservices);
 				$result = $this->db->update('services', $data);
 			} catch (Exception $e) {
