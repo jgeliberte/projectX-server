@@ -21,11 +21,31 @@
 								<div id="primary"></div>
 							</div>
 							<div class="modal-body">
-							<div class="form-group">
-								<div id="serviceIdDiv">
+								<div class="form-group">
+									<div id="serviceIdDiv">
+									</div>
 								</div>
+								<div class="form-group">
+									<label class="labelModal control-label" for="remarks">Remarks</label>
+									<div class="col-md-9">
+										<textarea class="form-control" 
+										id="remarks" placeholder="Remarks"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="labelModal control-label" for="totalAmount">Total Amount</label>
+									<div class="col-md-4">
+										<div class='input-group pesos'>
+											<span class="input-group-addon">
+												<i class="fa fa-rub" aria-hidden="true"></i>
+											</span>
+											<input type="text" class="form-control" 
+											id="totalAmount"/>
+										</div>
+									</div>
 								</div>
 							</div>
+							
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 								<button id="btnAddActivity" type="button" class="btn btn-primary">Save</button>
