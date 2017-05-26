@@ -24,7 +24,7 @@
 */
 
 #$config['base_url'] = 'http://localhost';
-$config['base_url'] = 'https://dental-management-client.herokuapp.com/'; // Test Site.
+$config['base_url'] = 'https://dental-management-client.herokuapp.com'; // Test Site.
 
 /*
 |--------------------------------------------------------------------------
