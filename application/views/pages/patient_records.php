@@ -58,7 +58,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="labelModal control-label" for="age" >BirthDate</label>
+											<label class="labelModal control-label" for="birthdate" >Birthdate</label>
 											<div class="col-md-9">
 												<div class='input-group date'>
 													<input type='text' id="birthdate" class="form-control" required/>

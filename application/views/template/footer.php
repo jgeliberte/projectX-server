@@ -1,11 +1,12 @@
 </body>
-<link rel="stylesheet" type="text/css" href="../../css/dms/titleBar.css">
-<link rel="stylesheet" type="text/css" href="../../css/dms/pageContent.css">
-<link rel="stylesheet" type="text/css" href="../../css/dms/dentalTab.css">
+	<script type="text/javascript" src="../../js/third-party/jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="../../js/third-party/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../js/third-party/datatable.js"></script>
+	<script type="text/javascript" src="../../js/third-party/notify.min.js"></script>
+	<script type="text/javascript" src="../../js/third-party/jquery-ui.js"></script>
 
-<link rel="stylesheet" href="../../css/third-party/bootstrap.min.css">
-<link rel="stylesheet" href="../../css/third-party/datatable.css">
-<link rel="stylesheet" href="../../css/third-party/jquery-ui.min.css">
-<link rel="stylesheet" href="../../css/third-party/jquery-ui.theme.min.css">
-<link rel="stylesheet" href="../../css/third-party/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="../../js/dms/patient/patient.js"></script>
+	<script type="text/javascript" src="../../js/dms/dental/dentalRecords.js"></script>
+	<script type="text/javascript" src="../../js/dms/dental/dentalService.js"></script>
+	<script type="text/javascript" src="../../js/dms/logs/logs.js"></script>
 </html>
