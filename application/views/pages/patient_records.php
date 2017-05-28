@@ -27,28 +27,28 @@
 										<!-- <form class="form-horizontal" role="form"> -->
 										<div class="form-group">
 											<label class="labelModal control-label" for="firstName">First Name</label>
-											<div class="col-md-9">
+											<div class="col-sm-9">
 												<input type="text" class="form-control" 
 												id="firstName" placeholder="First Name" required/>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="lastName" >Last Name</label>
-											<div class="col-md-9">
+											<div class="col-sm-9">
 												<input type="text" class="form-control"
 												id="lastName" placeholder="Last Name" required/>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="middleName">Middle Name</label>
-											<div class="col-md-9">
+											<div class="col-sm-9">
 												<input type="text" class="form-control"
 												id="middleName" placeholder="Middle Name" required/>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="gender" >Gender</label>
-											<div class="col-md-9">
+											<div class="col-sm-9">
 												<label class="radio-inline">
 													<input type="radio" name="gender" value="Male"> Male
 												</label>
@@ -60,6 +60,7 @@
 										<div class="form-group">
 											<label class="labelModal control-label" for="birthdate" >Birthdate</label>
 											<div class="col-md-9">
+
 												<div class='input-group date'>
 													<input type='text' id="birthdate" class="form-control" required/>
 													<span class="input-group-addon">
@@ -77,12 +78,12 @@
 						<div class="panel-group" id="accordion">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-								<a data-toggle="collapse" data-parent="#accordion" href="#contactInfo">
-									<h4 class="panel-title">
-										
+									<a data-toggle="collapse" data-parent="#accordion" href="#contactInfo">
+										<h4 class="panel-title">
+											
 											Contact Information
-										
-									</h4>
+											
+										</h4>
 									</a>
 								</div>
 								<div id="contactInfo" class="panel-collapse collapse">
@@ -90,7 +91,7 @@
 										<!-- <form class="form-horizontal" role="form"> -->
 										<div class="form-group">
 											<label class="labelModal control-label" for="address">Address</label>
-											<div class="col-md-9">
+											<div class="col-sm-9">
 												<input type="text" id="address" class="form-control" placeholder="ex. #10 sample st. BrangayName CityName Province" required/>
 												<div class="addressInputBox pull-left">
 													<label class="subLabelAddress" for="houseNumber">House Number</label>
@@ -111,21 +112,21 @@
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="email">Email Address</label>
-											<div class="col-md-4">
+											<div class="col-sm-4">
 												<input type="email" class="form-control"
 												id="email" placeholder="Email"/>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="primary">Primary Number</label>
-											<div class="col-md-4">
+											<div class="col-sm-4">
 												<input type="text" class="form-control"
 												id="primary" placeholder="Primary Number" required/>
 											</div>
 										</div>
 										<div class="form-group">
 											<label class="labelModal control-label" for="secondary">Secondary Number</label>
-											<div class="col-md-4">
+											<div class="col-sm-4">
 												<input type="text" class="form-control"
 												id="secondary" placeholder="SecondaryNumber"/>
 											</div>

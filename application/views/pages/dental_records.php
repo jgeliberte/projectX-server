@@ -27,14 +27,14 @@
 								</div>
 								<div class="form-group">
 									<label class="labelModal control-label" for="remarks">Remarks</label>
-									<div class="col-md-9">
+									<div class="col-sm-9">
 										<textarea class="form-control" 
 										id="remarks" placeholder="Remarks"></textarea>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="labelModal control-label" for="totalAmount">Total Amount</label>
-									<div class="col-md-4">
+									<div class="col-sm-4">
 										<div class='input-group pesos'>
 											<span class="input-group-addon">
 												<i class="fa fa-rub" aria-hidden="true"></i>
@@ -83,7 +83,7 @@
 		<div id="services" class="tab-pane fade tableAlignFromTop">
 			<table id="dentalService" class="table table-striped table-bordered dataTable no-footer" role="grid" width="100%">
 			</table>
-			<button style="margin: auto; display: block;" class="btn btn-primary btn-md" data-toggle="modal" data-target="#addService"><i class="fa fa-medkit fa-lg" aria-hidden="true"></i> Add Service
+			<button style="margin: auto; display: block;" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addService"><i class="fa fa-medkit fa-lg" aria-hidden="true"></i> Add Service
 			</button>
 
 			<!-- Add Dental Service -->
@@ -98,14 +98,14 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label class="labelModal control-label" for="serviceName">Service Name</label>
-									<div class="col-md-9">
+									<div class="col-sm-9">
 										<input type="text" class="form-control" 
 										id="serviceName" placeholder="Service Name"/>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="labelModal control-label" for="fee">Fee</label>
-									<div class="col-md-4">
+									<div class="col-sm-4">
 										<div class='input-group pesos'>
 											<span class="input-group-addon">
 												<i class="fa fa-rub" aria-hidden="true"></i>
