@@ -92,5 +92,11 @@
 			$result = $this->logs_model->addLogs($description);
 			return $result;
 		}
+
+		public function deleteService() {
+			$data = json_decode($_POST['service']);
+			$result = $this->services_model->deleteService($data);
+			return $result;
+		}
 	}
 ?>

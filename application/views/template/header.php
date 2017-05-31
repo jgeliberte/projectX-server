@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../../css/dms/titleBar.css">
-		<link rel="stylesheet" type="text/css" href="../../css/dms/pageContent.css">
-		<link rel="stylesheet" type="text/css" href="../../css/dms/dentalTab.css">
+		<script type="text/javascript" src="../../js/third-party/jquery-3.2.0.min.js"></script>
+		<script type="text/javascript" src="../../js/third-party/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../js/third-party/datatable.js"></script>
+		<script type="text/javascript" src="../../js/third-party/notify.min.js"></script>
+		<script type="text/javascript" src="../../js/third-party/jquery-ui.js"></script>
 
-		<link rel="stylesheet" href="../../css/third-party/bootstrap.min.css">
-		<link rel="stylesheet" href="../../css/third-party/datatable.css">
-		<link rel="stylesheet" href="../../css/third-party/jquery-ui.min.css">
-		<link rel="stylesheet" href="../../css/third-party/jquery-ui.theme.min.css">
-		<link rel="stylesheet" href="../../css/third-party/font-awesome-4.7.0/css/font-awesome.min.css">
+		<!-- patient Javascript -->
+		<script type="text/javascript" src="../../js/dms/patient/patientTable.js"></script>
+		<script type="text/javascript" src="../../js/dms/patient/patientApi.js"></script>
+		<script type="text/javascript" src="../../js/dms/patient/patient.js"></script>
 
+		<!-- dental Javacsript -->
+		<script type="text/javascript" src="../../js/dms/dental/dentalRecords/dentalTable.js"></script>
+		<script type="text/javascript" src="../../js/dms/dental/dentalRecords/dentalApi.js"></script>
+		<script type="text/javascript" src="../../js/dms/dental/dentalRecords/dentalRecords.js"></script>
+
+		<!-- dentalService Javascript -->
+		<script type="text/javascript" src="../../js/dms/dental/dentalServices/dentalServiceTable.js"></script>
+		<script type="text/javascript" src="../../js/dms/dental/dentalServices/dentalServiceApi.js"></script>
+		<script type="text/javascript" src="../../js/dms/dental/dentalServices/dentalService.js"></script>
+
+		<script type="text/javascript" src="../../js/dms/logs/logs.js"></script>
 	<title>DMS</title>
 </head>
 <body>
