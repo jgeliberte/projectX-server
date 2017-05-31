@@ -12,6 +12,11 @@ class Logs extends CI_Controller {
 		$result = $this->logs_model->addlog();
 		return $result;
 	}
+
+	public function fetchAllLogs(){
+		$result = $this->logs_model->fetchAll();
+		print json_encode($result);
+	}
 }
 
 ?>

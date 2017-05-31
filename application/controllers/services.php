@@ -94,7 +94,7 @@
 		}
 
 		public function deleteService() {
-			$data = json_decode($_POST['service']);
+			$data = json_decode($_POST['service_id']);
 			$result = $this->services_model->deleteService($data);
 			return $result;
 		}

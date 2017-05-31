@@ -5,5 +5,11 @@
 			$result = $this->db->insert('logs');
 			return $result;
 		}
+
+		public function fetchAll() {
+			$query = "SELECT * FROM logs";
+			$result = $this->db->query($query);
+			return $result->result();
+		}
 	}
 ?>

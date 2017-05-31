@@ -21,8 +21,14 @@
 			return $result;
 		}
 
-		public function archive() {
-	
+		public function deleteService($data) {
+			try {
+				$query = "DELETE FROM services WHERE idservices = '".$data."'";
+				$result = $this->db->query($query);
+				return $result;
+			} catch (Exception $e) {
+				return $result;
+			}
 		}
 
 		public function getService($data) {
