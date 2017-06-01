@@ -27,6 +27,7 @@
 
 		<!-- dentalInvetory Javascript -->
 		<script type="text/javascript" src="../../js/dms/inventory/inventory.js"></script>
+		<script type="text/javascript" src="../../js/dms/inventory/inventoryApi.js"></script>
 		<script type="text/javascript" src="../../js/dms/inventory/inventoryTable.js"></script>
 
 	<title>DMS</title>
