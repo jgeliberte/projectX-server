@@ -10,7 +10,7 @@
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
-								<a data-toggle="collapse" data-parent="#accordion" href="#dentalInventory">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#dentalInventory">
 									Dental Inventory
 								</a>
 							</h4>

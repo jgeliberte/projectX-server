@@ -17,7 +17,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordion" href="#basicInfo">
+										<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#basicInfo">
 											Basic Information
 										</a>
 									</h4>
@@ -78,13 +78,11 @@
 						<div class="panel-group" id="accordion">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<a data-toggle="collapse" data-parent="#accordion" href="#contactInfo">
-										<h4 class="panel-title">
-											
+								<h4 class="panel-title">
+									<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#contactInfo">
 											Contact Information
-											
-										</h4>
 									</a>
+									</h4>
 								</div>
 								<div id="contactInfo" class="panel-collapse collapse">
 									<div class="panel-body">
