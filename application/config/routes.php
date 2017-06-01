@@ -58,6 +58,7 @@ $route['v1/updateservice'] = "services/updateService";
 $route['v1/getallservices'] = "services/getAllServices";
 $route['v1/getservice/(:num)'] = "services/getService/$1";
 $route['v1/getexistingservice'] = "services/getExistingService";
+$route['v1/deleteservice'] = "services/deleteService";
 
 // DIAGNOSE MODULE
 $route['v1/diagnose'] = "diagnose/diagnosePatient";
@@ -73,6 +74,7 @@ $route['v1/updateitem'] = "inventory/updateItem";
 $route['v1/getexistingitem'] = "inventory/getExistingItem";
 
 // LOGS MODULE
+$route['v1/fetchlogs'] = "logs/fetchAllLogs";
 
 // USER MODULE
 $route['v1/logout'] = "login/logout";
