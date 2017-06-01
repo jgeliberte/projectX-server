@@ -17,7 +17,7 @@
 		</a>
 	</div>
 	<div id="inventoryMenu" class='square-box'>
-		<a href="../../v1/dentalinventory">
+		<a>
 			<div class='square-content inventory'><span class="textMenu">Inventory</span></div>
 		</a>
 	</div>

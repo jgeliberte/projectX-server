@@ -24,6 +24,11 @@
 		<script type="text/javascript" src="../../js/dms/dental/dentalServices/dentalService.js"></script>
 
 		<script type="text/javascript" src="../../js/dms/logs/logs.js"></script>
+
+		<!-- dentalInvetory Javascript -->
+		<script type="text/javascript" src="../../js/dms/inventory/inventory.js"></script>
+		<script type="text/javascript" src="../../js/dms/inventory/inventoryTable.js"></script>
+
 	<title>DMS</title>
 </head>
 <body>
