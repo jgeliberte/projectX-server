@@ -37,7 +37,7 @@
 									<div class="col-sm-4">
 										<div class='input-group pesos'>
 											<span class="input-group-addon">
-												<i class="fa fa-rub" aria-hidden="true"></i>
+												<span>&#8369;</span>
 											</span>
 											<input type="text" class="form-control" 
 											id="totalAmount"/>
@@ -108,7 +108,7 @@
 									<div class="col-sm-4">
 										<div class='input-group pesos'>
 											<span class="input-group-addon">
-												<i class="fa fa-rub" aria-hidden="true"></i>
+												<span>&#8369;</span>
 											</span>
 											<input type="text" class="form-control" 
 											id="fee"/>
