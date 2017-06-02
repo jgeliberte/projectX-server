@@ -51,7 +51,7 @@ class Inventory extends CI_Controller {
 				$data[$inventory_ctr]['id'] = $res->idinventory;
 				$data[$inventory_ctr]['item_code'] = $res->item_code;
 				$data[$inventory_ctr]['item_name'] = $res->item_name;
-				$data[$inventory_ctr]['item_details'] = $res->item_details;
+				// $data[$inventory_ctr]['item_details'] = $res->item_details;
 				$data[$inventory_ctr]['item_quantity'] = $res->item_quantity;
 				$data[$inventory_ctr]['date_created'] = $res->date_created;
 				$data[$inventory_ctr]['date_updated'] = $res->date_updated;

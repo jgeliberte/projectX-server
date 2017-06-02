@@ -54,7 +54,7 @@
 								</div>
 							</form>
 						</div>
-						<button id="addInventory" style="margin: auto; display: block;" class="btn btn-primary btn-md"><i class="fa fa-suitcase fa-lg"></i> Add</button>
+						<button id="btnAddInventory" style="margin: auto; display: block;" class="btn btn-primary btn-md"><i class="fa fa-suitcase fa-lg"></i> Add</button>
 					</div>
 				</div>
 			</div>
