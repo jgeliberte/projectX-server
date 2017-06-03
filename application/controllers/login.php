@@ -6,18 +6,26 @@ class Login extends CI_Controller {
 		parent::__construct();
 		$this->load->library('session');
 		$this->load->model('user_model');
+		$this->load->model('authentication_model');
 	}
 
 	public function index(){
-		$is_logged_in = $this->session->userdata('is_logged_in');
-		if(!isset($is_logged_in) || ($is_logged_in !== TRUE)) {
-			$this->load->view('template/header');
-			$this->load->view('pages/index');
-			$this->load->view('template/footer');			
+		$this->load->view('template/header');
+		if (sizeof($this->authentication_model->checkAuthentication()) != 0) {
+			if ($this->authentication_model->checkAuthentication()[0]->authentication_code == hash('sha512',getenv("username")."project-johngeliberte-rheyncaryllantonio")) {
+				$is_logged_in = $this->session->userdata('is_logged_in');
+				if(!isset($is_logged_in) || ($is_logged_in !== TRUE)) {
+					$this->load->view('pages/index');
+				} else {
+					header('Location: ' . '../../dashboard', true);
+				}
+			} else {
+				$this->load->view('pages/auth');
+			}
+		} else {
+			$this->load->view('pages/auth');
 		}
-		else {
-			header('Location: ' . '../../dashboard', true);
-		}
+		$this->load->view('template/footer');
 	}
 
 	public function validate($data=null){
@@ -107,5 +115,15 @@ class Login extends CI_Controller {
 		else {
 			header('Location: ' . '../../dashboard', true);
 		}
+	}
+
+	public function generateAuth() {
+		print $this->authentication_model->generateAuthCode();
+	}
+
+	public function addAuthCode() {
+		$data = $_POST['auth_code'];
+		$result = $this->authentication_model->insertAuthCode($data);
+		print $result;
 	}
 }
