@@ -21,8 +21,14 @@
 								<div id="primary"></div>
 							</div>
 							<div class="modal-body">
-								<div class="form-group">
-									<div id="serviceIdDiv">
+								<div class="row form-group">
+									<div class="col-sm-12">
+									    <div class="panel panel-primary">
+									      <div class="panel-heading">Services</div>
+									      <div class="panel-body">
+									      	<div id="serviceIdDiv"></div>
+									      </div>
+									    </div>
 									</div>
 								</div>
 								<div class="form-group">
