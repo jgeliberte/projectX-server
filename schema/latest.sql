@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: project_dms
+-- Host: localhost    Database: project_db
 -- ------------------------------------------------------
--- Server version	5.7.17-log
+-- Server version	5.7.18-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,13 +26,23 @@ CREATE TABLE `inventory` (
   `idinventory` int(11) NOT NULL AUTO_INCREMENT,
   `item_code` varchar(15) DEFAULT NULL,
   `item_name` varchar(45) DEFAULT NULL,
-  `Item_details` varchar(200) DEFAULT NULL,
+  `item_price` int(11) DEFAULT NULL,
   `item_quantity` int(11) DEFAULT NULL,
   `date_created` datetime DEFAULT NULL,
   `date_updated` datetime DEFAULT NULL,
   PRIMARY KEY (`idinventory`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `inventory`
+--
+
+LOCK TABLES `inventory` WRITE;
+/*!40000 ALTER TABLE `inventory` DISABLE KEYS */;
+INSERT INTO `inventory` VALUES (1,'test','test',NULL,1000,'2017-06-03 00:00:00','2017-06-03 00:00:00');
+/*!40000 ALTER TABLE `inventory` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `logs`
@@ -45,8 +55,18 @@ CREATE TABLE `logs` (
   `idlogs` int(11) NOT NULL AUTO_INCREMENT,
   `log_description` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`idlogs`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `logs`
+--
+
+LOCK TABLES `logs` WRITE;
+/*!40000 ALTER TABLE `logs` DISABLE KEYS */;
+INSERT INTO `logs` VALUES (11,'Added a service named test by jgeliberte'),(12,'Added an item named test with a quantity of 1000by jgeliberte');
+/*!40000 ALTER TABLE `logs` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `membership`
@@ -63,8 +83,18 @@ CREATE TABLE `membership` (
   PRIMARY KEY (`idmembership`),
   KEY `user_fk_id_idx` (`user_id_fk`),
   CONSTRAINT `user_fk_id` FOREIGN KEY (`user_id_fk`) REFERENCES `users` (`idusers`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `membership`
+--
+
+LOCK TABLES `membership` WRITE;
+/*!40000 ALTER TABLE `membership` DISABLE KEYS */;
+INSERT INTO `membership` VALUES (2,47,'jgeliberte','qwerty');
+/*!40000 ALTER TABLE `membership` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `patient_dental_history`
@@ -85,6 +115,15 @@ CREATE TABLE `patient_dental_history` (
   CONSTRAINT `patient_id_fk` FOREIGN KEY (`patient_id_fk`) REFERENCES `patient_information` (`idpatient`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `patient_dental_history`
+--
+
+LOCK TABLES `patient_dental_history` WRITE;
+/*!40000 ALTER TABLE `patient_dental_history` DISABLE KEYS */;
+/*!40000 ALTER TABLE `patient_dental_history` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `patient_information`
@@ -110,6 +149,15 @@ CREATE TABLE `patient_information` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `patient_information`
+--
+
+LOCK TABLES `patient_information` WRITE;
+/*!40000 ALTER TABLE `patient_information` DISABLE KEYS */;
+/*!40000 ALTER TABLE `patient_information` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `services`
 --
 
@@ -123,8 +171,18 @@ CREATE TABLE `services` (
   `date_created` datetime NOT NULL,
   `date_updated` datetime NOT NULL,
   PRIMARY KEY (`idservices`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `services`
+--
+
+LOCK TABLES `services` WRITE;
+/*!40000 ALTER TABLE `services` DISABLE KEYS */;
+INSERT INTO `services` VALUES (4,'test',1000,'2017-06-02 00:00:00','2017-06-02 00:00:00');
+/*!40000 ALTER TABLE `services` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `user_roles`
@@ -142,6 +200,15 @@ CREATE TABLE `user_roles` (
   CONSTRAINT `user_id` FOREIGN KEY (`user_id_fk`) REFERENCES `users` (`idusers`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_roles`
+--
+
+LOCK TABLES `user_roles` WRITE;
+/*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
+/*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
@@ -162,8 +229,18 @@ CREATE TABLE `users` (
   `email` varchar(45) DEFAULT NULL,
   `role` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idusers`)
-) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (47,'John','Geliberte','Domingo','Dr.','',0,0,'','');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -174,4 +251,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-21 15:47:43
+-- Dump completed on 2017-06-02 23:16:14
