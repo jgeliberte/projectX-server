@@ -23,12 +23,20 @@
 							<div class="modal-body">
 								<div class="row form-group">
 									<div class="col-sm-12">
-									    <div class="panel panel-primary">
-									      <div class="panel-heading">Services</div>
-									      <div class="panel-body">
-									      	<div id="serviceIdDiv"></div>
-									      </div>
-									    </div>
+									    <div class="panel-group">
+										  <div class="panel panel-primary">
+										    <div class="panel-heading">
+										      <h4 class="panel-title">
+										        <a class="accordion-toggle" data-toggle="collapse" href="#list-service">Services</a>
+										      </h4>
+										    </div>
+										    <div id="list-service" class="panel-collapse collapse">
+										      <div class="panel-body">
+										      	<div id="serviceIdDiv"></div>
+										      </div>
+										    </div>
+										  </div>
+										</div>
 									</div>
 								</div>
 								<div class="form-group">
