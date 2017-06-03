@@ -3,7 +3,7 @@
 
 		public function addDiagnosis($data){
 			try {
-				$query = "INSERT INTO patient_dental_history VALUES(0,'".$data->patient_id."','".$data->service_rendered."','".$data->date_rendered."','".$data->fee_rendered."','".$data->remarks_rendered."')";
+				$query = "INSERT INTO patient_dental_history VALUES(0,'".$data->patient_id."','".$data->service_rendered."','".date("Y/m/d")."','".$data->fee_rendered."','".$data->remarks_rendered."')";
 				$result = $this->db->query($query);
 			} catch (Exception $e) {
 				$result = $e->getMessage();
