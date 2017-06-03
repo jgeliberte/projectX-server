@@ -17,8 +17,8 @@
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
 								<h4 id="patientName" class="dentalPatientNameFont modal-title">H</h4>
-								<div id="gender"></div>
-								<div id="primary"></div>
+								<div style="display: flex;"><b>Gender:</b><div id="gender"></div><b>|</b>
+								<b>Birthdate:</b><div id="primary"></div></div>
 							</div>
 							<div class="modal-body">
 								<div class="row form-group">
@@ -54,7 +54,7 @@
 												<span>&#8369;</span>
 											</span>
 											<input type="text" class="form-control" 
-											id="totalAmount"/>
+											id="totalAmount" disabled/>
 										</div>
 									</div>
 								</div>
@@ -76,9 +76,8 @@
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal">&times;</button>
-								<h4 id="patientName2" class="dentalPatientNameFont modal-title">H</h4>
-								<div id="gender2"></div>
-								<div id="primary2"></div>
+								<div style="display: flex;"><b>Gender:</b><div id="gender"></div><b>|</b>
+								<b>Birthdate:</b><div id="primary"></div></div>
 							</div>
 							<div class="modal-body">
 								<table id="dentalActivities" class="table table-striped table-bordered dataTable no-footer" role="grid" width="100%">
